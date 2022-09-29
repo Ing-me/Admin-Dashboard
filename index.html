@@ -4,162 +4,220 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Admin Dashboard</title>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="header-1">
-                <div class="" id="search">
-                    <input type="text" name="search" id="search">
-                </div>
-                <div class="notification" id="notification">
-                    
-                </div>
-            </div>
-            <div class="header-2">
-                <div id="username">
+    <div class="sidebar">
+        <div class="dashboard menuItem">
+            <img src="images/view-dashboard-outline.png" alt=""><a href="#">Dashboard</a>
+        </div>
+        <div class="menuItem"><img src="images/home.png" alt=""><a href="#">Home</a></div>
+        <div class="menuItem"><img src="images/message-reply-outline.png" alt=""><a href="#">Messages</a></div>
+        <div class="menuItem"><img src="images/face-man-profile.png" alt=""><a href="#">Profile</a></div>
+        <div class="menuItem"><img src="images/clipboard-text-clock.png" alt=""><a href="#">History</a></div>
+        <div class="menuItem"><img src="images/calendar-check.png" alt=""><a href="#">Tasks</a></div>
+        <div class="menuItem"><img src="images/account-group.png" alt=""><a href="#">Communities</a></div>
+        <br>
+        <div class="menuItem"><img src="images/cog-outline.png" alt=""><a href="#">Settings</a></div>
+        <div class="menuItem"><img src="images/help-box.png" alt=""><a href="#">Support</a></div>
+        <div class="menuItem"><img src="images/shield-lock.png" alt=""><a href="#">Privacy</a></div>
+    </div>
 
+    <div class="navbar">
+        <div class="topNav">
+            <div class="search">
+                <div class="menuItem">
+                    <img src="images/magnif.png" alt="">
                 </div>
-                <div id="buttons">
-                    <button id="new">New</button>
-                    <button id="upload">Upload</button>
-                    <button id="share">Share</button>
+                <input type="text" name="search" autocomplete="off">
+            </div>
+            <div class="account">
+                <div class="menuIcon">
+                    <img src="images/bell.png" alt="">
                 </div>
+                <div class="avatar">
+                    <img src="images/account-circle.png" alt="">
+                </div>
+                <p class="name">meme123</p>
             </div>
         </div>
-        <div class="sidebar">
-            <div id="dashboard">
-                    Dashboard
-            </div>
-            <div id="home">Home</div>
-            <div class="profile">Profile</div>
-            <div id="messages">Messages</div>
-            <div id="history">History</div>
-            <div id="tasks">Tasks</div>
-            <div id="community">Communities</div>
-            
-            <div id="settings">Settings</div>
-            <div id="support">Support</div>
-            <div id="privacy">Privacy</div>
-        </div>
-        <div class="main">
-            <div id="cool-project">
-                <h3>Super Cool Project</h3>
-                <p>
-                    Sed tempus ut lacusut scelerisque suspendisse sollicitudin nibh erat, 
-                    id facilisis felis accusman nect
-                </p>
-                <div id="icon"></div>
-            </div>
 
-            <div id="less-project">
-                <h3>Less Cool Project</h3>
-                <p>
-                    Nullam condimentum ipsum ut lectus vehicula consector. Quisque sed dolor tincidunt,
-                    consecteur sapien et, facilisis dolor. Duis sem purus, dignissim ut sapien in, varius
-                    pellentesque lacus
-                </p>
-                <div id="icon"></div>
-            </div>
-
-            <div id="announcement">
-                <h3>Site Maintenance</h3>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque magni et quam ex 
-                    vero dolore expedita, voluptates ullam dolor sapiente sit earum repellendus 
-                    consectetur laudantium quidem optio dicta laboriosam molestiae.
-                </p>
-                <br>
-                <h3>Community Share Gay</h3>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque magni et quam ex 
-                    vero dolore expedita, voluptates ullam dolor sapiente sit earum repellendus 
-                    consectetur laudantium quidem optio dicta laboriosam molestiae.
-                </p>
-
-                <br>
-                <h3>Updated Privacy Policy</h3>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque magni et quam ex 
-                    vero dolore expedita, voluptates ullam dolor sapiente sit earum repellendus 
-                    consectetur laudantium quidem optio dicta laboriosam molestiae.
-                </p>
-                
-            </div>
-
-            <div id="impossible-app">
-                <h3>Impossible App</h3>
-                <p>
-                    Nullam condimentum ipsum ut lectus vehicula consector. Quisque sed dolor tincidunt,
-                    consecteur sapien et, facilisis dolor. Duis sem purus, dignissim ut sapien in, varius
-                    pellentesque lacus
-                </p>
-                <div id="icon"></div>
-            </div>
-
-            <div id="easy-app">
-                <h3>Easy Easy App</h3>
-                <p>
-                    Nullam condimentum ipsum ut lectus vehicula consector. Quisque sed dolor tincidunt,
-                    consecteur sapien et, facilisis dolor. Duis sem purus, dignissim ut sapien in, varius
-                    pellentesque lacus
-                </p>
-                <div id="icon"></div>
-            </div>
-
-            <div id="ad-blocker">
-                <h3>Ad Blocker</h3>
-                <p>
-                    Nullam condimentum ipsum ut lectus vehicula consector. Quisque sed dolor tincidunt,
-                    consecteur sapien et, facilisis dolor. Duis sem purus, dignissim ut sapien in, varius
-                    pellentesque lacus
-                </p>
-                <div id="icon"></div>
-            </div>
-
-            <div id="money-maker">
-                <h3>Money Maker</h3>
-                <p>
-                    Nullam condimentum ipsum ut lectus vehicula consector. Quisque sed dolor tincidunt,
-                    consecteur sapien et, facilisis dolor. Duis sem purus, dignissim ut sapien in, varius
-                    pellentesque lacus
-                </p>
-                <div id="icon"></div>
-            </div>
-
-            <div id="trending">
-                <div class="avatar">
-                    <img src="" alt="">
-                    <div class="trend">
-                        <span>@tegan</span>
-                        <p>World Peace Builder</p>
+        <div class="bottomNav">
+            <div class="botom">
+                <div class="profile">
+                    <div class="avatar">
+                        <img src="images/account-circle.png" alt="">
                     </div>
-                </div>
-                <div class="avatar">
-                    <img src="" alt="">
-                    <div class="trend">
-                        <span>@morgan</span>
-                        <p>Super Cool Project </p>
-                    </div>
-                </div>
-                <div class="avatar">
-                    <img src="" alt="">
-                    <div class="trend">
-                        <span>@kendall</span>
-                        <p>Life Changing App</p>
-                    </div>
-                </div>
-                <div class="avatar">
-                    <img src="" alt="">
-                    <div class="trend">
-                        <span>@alex</span>
-                        <p>No Traffic Maker</p>
+                    <div class="profile-name">
+                        <p class="greeting">Hi there,</p>
+                        <p class="name">meme123 <span class="username">(@meme123)</span></p>
                     </div>
                 </div>
             </div>
-
+            <div class="buttons">
+                <button class="btn">New</button>
+                <button class="btn">Upload</button>
+                <button class="btn">Share</button>
+            </div>
         </div>
     </div>
+
+    <main class="content">
+        <div class="projects">
+           <h3>Your Projects</h3> 
+           <div class="cards">
+                <div class="card">
+                    <h5 class="card-title">Super cool project</h5>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Neque iste voluptates ipsa itaque doloribus expedita ex ipsum 
+                        distinctio assumenda. Harum nesciunt sunt assumenda quaerat illum dolor. 
+                    </p>
+                    <div class="icons">
+                        <img src="images/star-plus.png" alt="">
+                        <img src="images/eye-plus.png" alt="">
+                        <img src="images/source-branch.png" alt="">
+                    </div>
+                </div>
+                <div class="card">
+                    <h5 class="card-title">less cool project</h5>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Neque iste voluptates ipsa itaque doloribus expedita ex ipsum 
+                        distinctio assumenda. Harum nesciunt sunt assumenda quaerat illum dolor. 
+                    </p>
+                    <div class="icons">
+                        <img src="images/star-plus.png" alt="">
+                        <img src="images/eye-plus.png" alt="">
+                        <img src="images/source-branch.png" alt="">
+                    </div>
+                </div>
+                <div class="card">
+                    <h5 class="card-title">Impossible App</h5>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Neque iste voluptates ipsa itaque doloribus expedita ex ipsum 
+                        distinctio assumenda. Harum nesciunt sunt assumenda quaerat illum dolor. 
+                    </p>
+                    <div class="icons">
+                        <img src="images/star-plus.png" alt="">
+                        <img src="images/eye-plus.png" alt="">
+                        <img src="images/source-branch.png" alt="">
+                    </div>
+                </div>
+                <div class="card">
+                    <h5 class="card-title">Easy Peasy App</h5>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Neque iste voluptates ipsa itaque doloribus expedita ex ipsum 
+                        distinctio assumenda. Harum nesciunt sunt assumenda quaerat illum dolor. 
+                    </p>
+                    <div class="icons">
+                        <img src="images/star-plus.png" alt="">
+                        <img src="images/eye-plus.png" alt="">
+                        <img src="images/source-branch.png" alt="">
+                    </div>
+                </div>
+                <div class="card">
+                    <h5 class="card-title">Ad Blocker</h5>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Neque iste voluptates ipsa itaque doloribus expedita ex ipsum 
+                        distinctio assumenda. Harum nesciunt sunt assumenda quaerat illum dolor. 
+                    </p>
+                    <div class="icons">
+                        <img src="images/star-plus.png" alt="">
+                        <img src="images/eye-plus.png" alt="">
+                        <img src="images/source-branch.png" alt="">
+                    </div>
+                </div>
+                <div class="card">
+                    <h5 class="card-title">Money Maker</h5>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Neque iste voluptates ipsa itaque doloribus expedita ex ipsum 
+                        distinctio assumenda. Harum nesciunt sunt assumenda quaerat illum dolor. 
+                    </p>
+                    <div class="icons">
+                        <img src="images/star-plus.png" alt="">
+                        <img src="images/eye-plus.png" alt="">
+                        <img src="images/source-branch.png" alt="">
+                    </div>
+                </div>
+           </div>
+        </div>
+        <div class="announcements">
+            <h3>Announcements</h3> 
+            <ul class="card">
+            <li class="announcement">
+                <h5 class="card-title">Site Maintenance</h5>
+                <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, 
+                    voluptates suscipit. Illo dolor maxime alias veniam autem soluta impedit
+                     incidunt aliquam architecto sunt ad et, tempore, ab quisquam excepturi eum?
+                </p>
+            </li>
+            <li class="announcement">
+                <h5 class="card-title">Community Share Day</h5>
+                <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, 
+                    voluptates suscipit. Illo dolor maxime alias veniam autem soluta impedit
+                     incidunt aliquam architecto sunt ad et, tempore, ab quisquam excepturi eum?
+                </p>
+            </li>
+            <li class="announcement">
+                <h5 class="card-title">Uploaded Privacy Policy</h5>
+                <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, 
+                    voluptates suscipit. Illo dolor maxime alias veniam autem soluta impedit
+                     incidunt aliquam architecto sunt ad et, tempore, ab quisquam excepturi eum?
+                </p>
+            </li>
+            </ul>
+        </div>
+
+        <div class="trending">
+            <h3>Trending</h3>
+            <ul class="card">
+                <li class="trend trend-1">
+                    <div class="avatar">
+                        <img src="images/account-circle.png" alt="">
+                    </div>
+                    <div class="account">
+                        <p class="username">@meme123</p>
+                        <p class="name card-text">World peace builder</p>
+                    </div>
+                </li>
+                <li class="trend trend-1">
+                    <div class="avatar">
+                        <img src="images/account-circle.png" alt="">
+                    </div>
+                    <div class="account">
+                        <p class="username">@meme123</p>
+                        <p class="name card-text">Super cool project</p>
+                    </div>
+                </li>
+                <li class="trend trend-1">
+                    <div class="avatar">
+                        <img src="images/account-circle.png" alt="">
+                    </div>
+                    <div class="account">
+                        <p class="username">@meme123</p>
+                        <p class="name card-text">Life changing app</p>
+                    </div>
+                </li>
+                <li class="trend trend-1">
+                    <div class="avatar">
+                        <img src="images/account-circle.png" alt="">
+                    </div>
+                    <div class="account">
+                        <p class="username">@meme123</p>
+                        <p class="name card-text">No trafic maker</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </main>
 </body>
 </html>

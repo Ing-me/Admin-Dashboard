@@ -1,0 +1,326 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 16px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    --text-primary: black;
+    --text-secondary: white;
+    --bg-primary: #23232e;
+    --bg-secondary: #141418;
+    --transition-speed: 1s;
+    --sidebar-color: #0ea5e9;
+    --sidebar-width: clamp(210px, 22vw, 325px);
+    --nav-bg-1: #f8f8f8;
+    --nav-color-1:#c9c9c9;
+    --nav-color-2: #f8fafc;
+    --blue-1: #084c61;
+    --content-gray: rgb(235, 235, 235);
+    --transition-noSidebar: margin-left 0.4s ease-in;
+    --transition-sidebar: width 0.4s ease-in;
+    --gh-avatar: #bbf7d0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+        "sidebar navbar navbar navbar"
+        "sidebar contents contents contents";
+    grid-template-rows: 0.8fr 4fr;
+    grid-template-columns: 5rem 1fr 1fr 1fr;
+
+}
+.sidebar{
+    grid-area: sidebar;
+    background-color: var(--sidebar-color);
+    width: 5rem;
+    position: fixed;
+    transition: var(--transition-sidebars);
+    overflow: hidden;
+    height: 100vh;
+}
+.sidebar:hover{
+    width: var(--sidebar-width);
+}
+.menuItem >a{
+    display: none;
+    text-decoration: none;
+    margin-left: 5%;
+    color: var(--text-secondary);
+}
+.sidebar:hover > .menuItem > a{
+    display: inline;
+    text-decoration: none;
+}
+
+.sidebar:hover ~ .navbar,
+.sidebar:hover ~ .content{
+    margin-left: calc(var(--sidebar-width) - 5rem);
+}
+
+.menuItem{
+    color: var(--text-secondary);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.menuItem > * {
+    cursor: pointer;
+}
+.sidebar > div:not(:first-child) > * {
+    padding: 1vw 0.1vw 0.1vw 0vw;
+    font-size: calc(20px + 0.2vw);
+    padding-left: 20px;
+}
+.sidebar > div:not(:first-child) > {
+    width: calc(20px + 0.5vw);
+    height: calc(20px + 0.5vw);
+}
+.dashboard{
+    font-size: clamp(12px, calc(25px + 0.9vw), 50px);
+}
+.dashboard > img{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: calc(40px + 0.7vw);
+    height: calc(40px + 0.7vw);
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+
+.navbar{
+    grid-area: navbar;
+    transition: var(--transition-noSidebar);
+    background-color: var(--nav-bg-1);
+    padding: 1.5rem 3rem;
+    border-bottom: 2px solid rgb(219,219,219);
+    position: sticky;
+    top: 0;
+}
+.topNav{
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    margin-bottom: 2.5rem;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    width: 100%;
+}
+.search > input {
+    display: inline-block;
+    border: 0;
+    background-color: var(--nav-color-1);
+    padding: 0.75rem 1.5rem;
+    outline-color: var(--blue-1);
+    margin-left: 1.25rem;
+    border-radius: 15px;
+    width: min(80%, 600px);
+}
+.navbar .account{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+.avatar{
+    background:  var(--gh-avatar) center center / cover no-repeat;
+    border-radius: 50%;
+}
+.account .avatar{
+    margin: 0.1rem 2rem 0 2rem;
+    height: 40px;
+    width: 40px;
+}
+.account .avatar img{
+    height: 40px;
+    width: 40px;
+}
+
+.bottomNav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile .avatar{
+    width: 60px;
+    height: 60px;
+}
+.profile .avatar img{
+    width: 60px;
+    height: 60px;
+}
+.greeting{
+    font-weight: 800;
+    margin-bottom: 0.4rem;
+}
+.profile .name{
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+.buttons{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+}
+.btn{
+    background-color: var(--sidebar-color);
+    color: var(--text-secondary);
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    border-radius: 15px;
+    font-size: 18px;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+.content{
+    grid-area: contents;
+    transition: var(--transition-noSidebar);
+    background-color: var(--content-gray);
+    display: grid;
+    padding: 2rem;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: min-content 1fr;
+    gap: 2rem;
+    grid-template-areas: 
+    "projects announcements"
+    "projects trending";
+}
+
+.content h3{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+.projects{
+    grid-area: projects;
+}
+.projects .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 250px;
+    gap: 2rem;
+    padding-bottom: 2rem;
+}
+.projects .card {
+    background-color: var(--nav-color-2);
+    border-left: 10px solid rgb(255,197, 91);
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+}
+.projects .card-title{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+}
+
+.projects .card-text{
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.projects .icons{
+    margin-top: auto;
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    grid-area: 1.4rem;
+    align-items: center;
+    padding-bottom: 5px;
+    padding-right: 5px;
+}
+.card{
+    background-color: var(--nav-color-2);
+    padding: 2rem;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 /0.1), 0 4px 6px -4px rgb(0 0 0 /0.1);
+    list-style: none;
+}
+.announcements{
+    grid-area: announcements;
+
+}
+.announcement{
+    width: 25ch;
+    padding: 1rem 0;
+}
+.announcement:first-child{
+    padding-top: 0;
+}
+.announcement:last-child{
+    page-break-after: 0;
+}
+.announcement h5{
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+.announcement p{
+    font-size: 0.8rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.announcement + .announcement{
+    border-top: rgb(255, 115,115) 1px solid;
+}
+
+.trending{
+    grid-area: trending;
+}
+.trending .card {
+    padding: 1.5rem;
+}
+.trend{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+
+.trend .account{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+.trend .avatar{
+    width: 40px;
+    height: 40px;
+}
+.trend .avatar img{
+    width: 40px;
+    height: 40px;
+}
+
+.trend .username{
+    font-weight: 500;
+    margin-bottom: 0.15rem;
+}
+img{
+    cursor: pointer;
+}
